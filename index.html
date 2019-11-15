@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Калькулятор</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=7">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="CalculatorStyle.css">
+        <script src="CalculatorScript.js"></script>
+
+    </head>
+    <body>
+        
+
+        <form>
+            <Header><h1>Калькулятор</h1></Header>
+            <input type="text" name="InputData" oninput="OnEnterData();" autocomplete="off"  id="it1">
+            <br>
+            <p name="OutputData" id="it2">Answer</p>
+            
+            
+            <div class = "div1">
+                <div class="div2">
+                    <input type="button" onclick="document.getElementById('it1').value = '';" class="button-clear" value="Clear">
+                    <input type="button" onclick="var data = document.getElementById('it1').value;
+                     document.getElementById('it1').value = data.substring(0, data.length - 1);"
+                      class="button-delete" value="Delete">
+                    <input type="button" onclick="OnClickButton(this.value);" value="∞">
+                 
+                </div>
+                <div class="div2">
+                    <input type="button" onclick="OnClickButton(this.value);" class="button-number" value="7">
+                    <input type="button" onclick="OnClickButton(this.value);" class="button-number" value="8">
+                    <input type="button" onclick="OnClickButton(this.value);" class="button-number" value="9">
+                    <input type="button" onclick="OnClickButton(this.value);" value="(">
+                    <input type="button" onclick="OnClickButton(this.value);" value=")">
+                </div>
+                <div>
+                    <input type="button" onclick="OnClickButton(this.value);" class="button-number" value="4">
+                    <input type="button" onclick="OnClickButton(this.value);" class="button-number" value="5">
+                    <input type="button" onclick="OnClickButton(this.value);" class="button-number" value="6">
+                    <input type="button" onclick="OnClickButton(this.value);" value="&times;">
+                    <input type="button" onclick="OnClickButton(this.value);" value="&divide;">
+                </div>
+                <div>
+                    <input type="button" onclick="OnClickButton(this.value);" class="button-number" value="1">
+                    <input type="button" onclick="OnClickButton(this.value);" class="button-number" value="2">
+                    <input type="button" onclick="OnClickButton(this.value);" class="button-number" value="3">
+                    <input type="button" onclick="OnClickButton(this.value);" value="+">
+                    <input type="button" onclick="OnClickButton(this.value);" value="-">
+                </div>
+                <div>
+                    <input type="button" onclick="OnClickButton(this.value);" value=".">
+                    <input type="button" onclick="OnClickButton(this.value);" class="button-number" value="0">
+                    <input type="button" onmousedown="OnEqualButton();"  onmouseup="ValidateData();" class="button-equal" value="=">
+                    <input type="button" onclick="OnClickButton(this.value);" value="%">
+                 
+                </div> 
+            </div>
+        </form>
+       
+
+
+
+        
+    </body>
+
+</html>
+
