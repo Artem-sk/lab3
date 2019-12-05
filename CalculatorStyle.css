@@ -13,7 +13,7 @@ header
 form
 {
     background-color: darkgray;
-    width: fit-content;
+    width: 300px;
     padding: 5pt;
     border: 5pt solid rgb(26, 0, 0);
 }
