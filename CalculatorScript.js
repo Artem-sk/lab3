@@ -1,4 +1,4 @@
-MyIsValid;
+let MyIsValid;
 
 function OnClickButton(data) {
     document.getElementById('it1').value += data;
